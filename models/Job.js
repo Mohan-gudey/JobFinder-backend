@@ -12,8 +12,6 @@ const jobSchema = new mongoose.Schema({
   tags: [{ type: String }],
   remote: { type: Boolean, default: false },
   image: { type: String },
-  rating:{ type: String },
-  reviews:{ type: String },
 });
 
 module.exports = mongoose.model("Job", jobSchema);
