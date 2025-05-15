@@ -7,11 +7,11 @@ const jobSchema = new mongoose.Schema({
   type: { type: String, required: true },
   experience: { type: String },
   salary: { type: String },
-  salaryNumber: { type: Number },
   description: { type: String, required: true },
   tags: [{ type: String }],
   remote: { type: Boolean, default: false },
   image: { type: String },
+  applyLink: { type: String },
 });
 
 module.exports = mongoose.model("Job", jobSchema);
