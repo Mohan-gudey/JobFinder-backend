@@ -3,7 +3,7 @@ const cors = require("cors");
 const helmet = require("helmet");
 const connectDB = require("./config/db"); // MongoDB connection
 const jobRoutes = require("./routes/jobs");
-
+const urlRoutes = require("./routes/urls");
 require("dotenv").config(); // Load environment variables
 
 const app = express();
@@ -18,7 +18,7 @@ app.use(helmet());
 
 // Routes
 app.use("/api/jobs", jobRoutes);
-
+app.use("/api/urls", urlRoutes);
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
